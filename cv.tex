@@ -1,0 +1,155 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge P. BALA \textsc{SEKAR}
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Phone:}     & +(91) 9965999159\\
+    \textsc{email:}     & 
+    \href{mailto:sekarb3188@gmail.com}{sekarb3188@gmail.com}\\
+    \textsc{github:}    & https://github.com/balampbv
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Education}
+\begin{tabular}{r|p{11cm}}
+ \emph{Current} & B.E at \textsc{College of Engineering Guindy, Chennai}\\\textsc{Aug 2015-Apr2019}&\emph{Information Science and Technology} \qquad \qquad \qquad \qquad \quad CGPA: 9.02\\{}\hfill(upto 6th semester)\multicolumn{2}{c}{} \\
+ \textsc{Jun-Apr 2015} & HighSchool at \textsc{A.P.T Durairaj Higher Secondary School},Madurai\\    \hfill Percentage: 96.6\multicolumn{2}{c}{}
+\end{tabular}
+
+%Section: Experience
+\section{Experience}
+{\textsc{Summer Internship @ Expanion} \hfill May 2018 - Jun 2018 \\
+\emph{Developed Expert Finder, Job seeker modules}\\  
+Software/Languages used: Java servlets, JSP, Hibernate, Handlebars.\\
+Platform used: Eclipse} \\
+
+%Section: Education
+\section{Technology skills}
+\begin{tabular}{rl}
+ \textsc{Programming Languages:}& C, C++, Java, Python\\
+%textsc{Web Based Technologies:}& MySQL,\\
+\textsc{Mark Up Languages:}& HTML, Markdown, LaTex\\
+\textsc{Frameworks:}& Node Js, Flask\\
+\textsc{Databases:}& MYSQL, Mongodb\\
+\textsc{Tools:}& Git, Lex\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Projects And Courseworks}
+{\textsc{ Chamber of Secrets(Online Game)} \hfill Dec 2016- Feb 2017 \\
+\emph{
+A Online game which emphasizes in finding the relation between the given set of images. Database has been maintained for user details,leaderboard and questions. 
+}\\  
+Software/Languages used: Nodejs,ExpressJs, MongoDb.} \\
+
+
+{\textsc{Obstacle Detection} \hfill July 2017 - Nov 2017 \\
+\emph{ Unmanned aerial vehicle which detects an obstacle in its path.\\
+Software used: Python, Mathematica. Hardware used: Raspberry Pi, Lidar} 
+
+{\textsc{ Generating Code from a Graphical User Interface Screenshot} \hfill Dec 2017 - Present \\
+\emph{ Transforming a graphical user interface screenshot created by a designer into computer code in order to build customized software, websites.\\
+Software used: Python,Tensorflow,BASH,Keras} \\
+
+%Section: Scholarships and additional info
+\section{Awards and Appreciation}
+\begin{tabular}{rl}
+\textsc{Nov} 2016 &2nd position in Coding contest conducted by DIST,CEG.\\
+\textsc{Mar} 2018 & 3rd position in TIP Expo conducted by DIST,CEG.
+\end{tabular}
+
+\section{Interests}
+\begin{itemize}
+\item Algorithms and Data Structures
+\item Web development
+\item Database management system
+\item Git , Github
+\end{itemize}
+\section{clubs and Activities}
+CEGLUG(CEG Linux Users Group),\emph{Member.}\hfill Aug 2015 - Present
+
+\section{Volunteering}
+ National Service Scheme - CEG,\emph{Coordinator.} \hfill Jul 2015 - Aug 2016\\
+ ITRIX'18 Technical Symposium - CEG,\emph{Overall Coordinator.}\hfill Jul 2017 - Aug 2018
+
+%Section: Languages
+\section{Languages}
+\begin{itemize}
+ \item Tamil \item English 
+\end{itemize}
+
+
+\end{document}
