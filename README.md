@@ -1,2 +1,2 @@
-# resume
-My resume
+# Resume
+You can find my resume latex files in this repo
